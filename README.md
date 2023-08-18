@@ -1,4 +1,4 @@
-![A program documented with vicdocs](https://github.com/capjamesg/viclint/blob/main/vicdocs.png?raw=true)
+![A program documented with vicdocs](https://github.com/capjamesg/vicdocs/blob/main/vicdocs.png?raw=true)
 
 # vicdocs
 
