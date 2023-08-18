@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>{{ title }} - VisionScript Code</title>
+        
+        <link rel="icon" href="https://visionscript.dev/static/logo.svg" type="image/svg+xml" />
+
+        <link rel="stylesheet" href="./styles.css" />
+
+        <meta name="description" content="{{ description }}" />
+
+        <meta property="og:title" content="{{ title }} - VisionScript Code" />
+        <meta property="og:description" content="{{ description }}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body>
+        <nav>
+            <p>
+                {% if title %}{{ title }} - {% endif %}VisionScript <span class="hide_on_mobile">Code</span>
+            </p>
+        </nav>
+        <main>
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+            <p style="margin-bottom: 20px;">Made by {{ author }}</p>
+            <h2>Source Code</h2>
+            <ul id="cells">
+                <li class="cell">
+{{ code }}
+                </li>
+            </ul>
+            {% if functions %}
+                <h2>Functions ({{ functions|length }})</h2>
+                {% for function_name, description in functions.items() %}
+                <h3>{{ function_name }}</h3>
+                <p>{{ description }}</p>
+                {% endfor %}
+            {% endif %}
+
+            <section class="download">
+                <p><a href="./index.vicnb">Download as .vic</a></p>
+                <p><a href="./index.vic">Download as .vicnb</a></p>
+            </section>
+        </main>
+    </body>
+</html>
