@@ -31,3 +31,5 @@ vicdocs file.vic
 This will generate a HTML file in a `{file}-docs`, where `{file}` is the name of the VisionScript file for which you are generating documentation.
 
 ## License
+
+This project is licensed under an [MIT license](LICENSE).
